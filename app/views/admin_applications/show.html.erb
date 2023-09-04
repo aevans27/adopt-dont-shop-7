@@ -1,0 +1,10 @@
+<h1> All Pets on the Application </h1>
+<% @pets.each do |pet| %>
+  <%= pet.name %>
+  <% if pet.approved? %>
+    <p> Approved </p>
+  <% else %>
+    <%= link_to "Approve", "/admin/pets/#{pet.id}/approve", method: :post, class: 'approve-button' %>
+  <% end %>
+<% end %>
+

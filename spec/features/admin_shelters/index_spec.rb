@@ -24,7 +24,7 @@ RSpec.describe "the pets index" do
     application.add_pet(pet_2.id)
 
     visit '/admin/shelters'
-
+    
     expect(page).to have_content("Pending")
     
   end
