@@ -3,7 +3,8 @@ class AdminPetsController < ApplicationController
     @pet = Pet.find(params[:id])
     @pet.update(adoptable: false)
 
-    @application = Application.find(params[:id])
+    application_id = params[:application_id]
+    @application = Application.find(application_id)
 
     redirect_to "/admin/applications/#{@application.id}"
   end

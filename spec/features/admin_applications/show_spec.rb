@@ -41,7 +41,9 @@ RSpec.describe "the admin applications show page" do
     visit "/admin/applications/#{application.id}"
     click_button('Approve')
 
-    expect(page).not_to have_content('Approve')
+    save_and_open_page
+
+    expect(page).to have_content('Approved')
   end
 
   it "changes the status of the pet to not adoptable" do
