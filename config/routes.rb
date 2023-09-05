@@ -49,7 +49,7 @@ Rails.application.routes.draw do
 
   get "/admin/applications/:id", to: "admin_applications#show"
 
-  post "/admin/pets/:id/approve", to: "admin/pets#approve"
+  post "/admin/pets/:id/approve", to: "admin_pets#approve"
 
 
 end
